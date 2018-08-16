@@ -14,7 +14,7 @@ export class DaedalusService {
 
   getSystems(): Observable<System[]> {
     const headers = this.createHeaders();
-    const systemsUrl = 'http://127.0.0.1:8000/systems/';
+    const systemsUrl = 'http://127.0.0.1:8000/systems-list/';
     return this.http.get<System[]>(systemsUrl, {headers: this.createHeaders()});
   }
 

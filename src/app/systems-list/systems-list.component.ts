@@ -4,10 +4,10 @@ import {System} from '../services/daedalus/System';
 
 @Component({
   selector: 'app-systems',
-  templateUrl: './systems.component.html',
-  styleUrls: ['./systems.component.css']
+  templateUrl: './systems-list.component.html',
+  styleUrls: ['./systems-list.component.css']
 })
-export class SystemsComponent implements OnInit {
+export class SystemsListComponent implements OnInit {
 
   systems: System[];
 
