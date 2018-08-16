@@ -13,12 +13,14 @@ import { DaedalusService } from './services/daedalus/daedalus.service';
 
 // Modules
 import { AppRoutingModule } from './app-routing.module';
+import { SystemDetailComponent } from './system-detail/system-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SystemsListComponent,
     NewSystemComponent,
+    SystemDetailComponent,
   ],
   imports: [
     AppRoutingModule,

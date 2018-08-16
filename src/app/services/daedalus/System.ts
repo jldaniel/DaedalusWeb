@@ -8,4 +8,6 @@ export interface System {
   description: string;
   input_variables: InputVariable[];
   output_variables: OutputVariable[];
+  created: Date;
+  updated: Date;
 }
