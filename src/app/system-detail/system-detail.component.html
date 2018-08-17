@@ -1,0 +1,35 @@
+<h1>{{ system?.name }}</h1>
+
+<b>Description</b>
+<p>{{ system?.description }}</p>
+
+<b>Created On</b>
+<p>{{ system?.created }}</p>
+
+<b>Last Updated</b>
+<p>{{ system?.updated }}</p>
+
+<b>Input Variables</b>
+<div *ngFor="let inputVariable of system?.input_variables">
+  <div>
+    <b>{{ inputVariable.name }}</b>
+    <p>{{ inputVariable.description }}</p>
+  </div>
+</div>
+
+<b>Output Variables</b>
+<div *ngFor="let outputVariable of system?.output_variables">
+  <div>
+    <b>{{ outputVariable.name }}</b>
+    <p>{{ outputVariable.description }}</p>
+  </div>
+</div>
+
+<b>DataSets</b> <button>Add Dataset</button>
+<div *ngFor="let dataset of system?.datasets; let i = count">
+  <div>
+    <b>Dataset: {{i}}</b>
+    <p>{{ dataset.description }}</p>
+    <p>Runs: {{ dataset.runs }}</p>
+  </div>
+</div>

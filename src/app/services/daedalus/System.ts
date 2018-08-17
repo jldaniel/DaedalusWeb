@@ -1,6 +1,7 @@
 
 import {InputVariable} from './InputVariable';
 import {OutputVariable} from './OutputVariable';
+import {DataSet} from './DataSet';
 
 export interface System {
   id: number;
@@ -10,4 +11,5 @@ export interface System {
   output_variables: OutputVariable[];
   created: Date;
   updated: Date;
+  datasets?: DataSet[];
 }

@@ -3,7 +3,7 @@
 
   <div *ngFor="let system of systems">
     <div>
-      <h5>{{system?.name}}</h5>
+      <h5><a routerLink="/systems/{{system?.id}}">{{system?.name}}</a></h5>
       <p>{{system?.description}}</p>
       <p>Created: {{system?.created}}</p>
       <p>Updated: {{system?.created}}</p>
