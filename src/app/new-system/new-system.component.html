@@ -1,1 +1,36 @@
-<h1> Make a new system </h1>
+<h1> New System </h1>
+
+<form [formGroup]="systemForm" (ngSubmit)="onSubmit()">
+  <label for="name">System Name</label>
+  <input type="text" id="name" formControlName="name">
+
+  <label for="description">System Description</label>
+  <input type="text" id="description" formControlName="description">
+
+  <!-- Input Variables -->
+  <h3>Input Variables</h3>
+  <button type="button" (click)="addInputVariable()">Add Input</button>
+
+
+  <div formArrayName="inputVariables" *ngFor="let input of systemForm.get('inputVariables').controls; let i = index;">
+    <div [formGroupName]="i">
+      <label for="inputName">Name</label>
+      <input type="text" id="inputName" formControlName="name">
+    </div>
+  </div>
+
+
+  <!-- Output Variables -->
+  <h3>Output Variables</h3>
+  <button type="button" (click)="addOutputVariable()">Add Output</button>
+
+  <div formArrayName="outputVariables" *ngFor="let output of systemForm.get('outputVariables').controls; let i = index;">
+    <div [formGroupName]="i">
+      <label for="outputName">Name</label>
+      <input type="text" id="outputName" formControlName="name">
+    </div>
+  </div>
+
+
+  <button type="submit">Create</button>
+</form>
