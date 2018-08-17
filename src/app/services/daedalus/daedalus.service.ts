@@ -10,12 +10,17 @@ import {Observable} from 'rxjs';
 })
 export class DaedalusService {
 
+  rootUrl = 'http://127.0.0.1:8000';
+  systemsUrl = this.rootUrl + '/systems/';
+
   constructor(private http: HttpClient) { }
 
   getSystems(): Observable<System[]> {
-    const headers = this.createHeaders();
-    const systemsUrl = 'http://127.0.0.1:8000/systems/';
-    return this.http.get<System[]>(systemsUrl, {headers: this.createHeaders()});
+    return this.http.get<System[]>(this.systemsUrl, {headers: this.createHeaders()});
+  }
+
+  createSystem(system: System): Observable<System> {
+    return this.http.post<System>(this.systemsUrl, system, {headers: this.createHeaders()});
   }
 
   /**

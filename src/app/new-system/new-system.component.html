@@ -12,10 +12,12 @@
   <button type="button" (click)="addInputVariable()">Add Input</button>
 
 
-  <div formArrayName="inputVariables" *ngFor="let input of systemForm.get('inputVariables').controls; let i = index;">
+  <div formArrayName="inputVariables" *ngFor="let input of getControls(systemForm, 'inputVariables'); let i = index;">
     <div [formGroupName]="i">
       <label for="inputName">Name</label>
       <input type="text" id="inputName" formControlName="name">
+      <label for="inputDescription">Description</label>
+      <input type="text" id="inputDescription" formControlName="description">
     </div>
   </div>
 
@@ -24,10 +26,12 @@
   <h3>Output Variables</h3>
   <button type="button" (click)="addOutputVariable()">Add Output</button>
 
-  <div formArrayName="outputVariables" *ngFor="let output of systemForm.get('outputVariables').controls; let i = index;">
+  <div formArrayName="outputVariables" *ngFor="let output of getControls(systemForm, 'outputVariables'); let i = index;">
     <div [formGroupName]="i">
       <label for="outputName">Name</label>
       <input type="text" id="outputName" formControlName="name">
+      <label for="outputDescription">Description</label>
+      <input type="text" id="outputDescription" formControlName="description">
     </div>
   </div>
 
