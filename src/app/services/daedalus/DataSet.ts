@@ -11,8 +11,8 @@ export interface DataSet {
 
 
 export interface Data {
-  inputs: InputData;
-  outputs: OutputData;
+  inputs: InputData[];
+  outputs: OutputData[];
 }
 
 export interface InputData {

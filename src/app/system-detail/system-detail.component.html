@@ -25,7 +25,7 @@
   </div>
 </div>
 
-<b>DataSets</b> <button>Add Dataset</button>
+<b>DataSets</b> <button><a routerLink="/systems/{{system?.id}}/datasets/new">Add Dataset</a></button>
 <div *ngFor="let dataset of system?.datasets; let i = count">
   <div>
     <b>Dataset: {{i}}</b>

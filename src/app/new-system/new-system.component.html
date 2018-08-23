@@ -11,7 +11,6 @@
   <h3>Input Variables</h3>
   <button type="button" (click)="addInputVariable()">Add Input</button>
 
-
   <div formArrayName="inputVariables" *ngFor="let input of getControls(systemForm, 'inputVariables'); let i = index;">
     <div [formGroupName]="i">
       <label for="inputName">Name</label>
@@ -20,7 +19,6 @@
       <input type="text" id="inputDescription" formControlName="description">
     </div>
   </div>
-
 
   <!-- Output Variables -->
   <h3>Output Variables</h3>
@@ -34,7 +32,6 @@
       <input type="text" id="outputDescription" formControlName="description">
     </div>
   </div>
-
 
   <button type="submit">Create</button>
 </form>

@@ -1,0 +1,31 @@
+<h3>New DataSet</h3>
+
+<button type="button" (click)="addRun()">Add Run</button>
+
+<ngx-datatable
+  #mydatatable
+  class="material"
+  [headerHeight]="50"
+  [limit]="5"
+  [columnMode]="'force'"
+  [footerHeight]="50"
+  [rowHeight]="'auto'"
+  [rows]="data">
+  <ngx-datatable-column name="Run #">
+    <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-value="value" let-row="nRows">
+      {{rowIndex+1}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column *ngFor="let colName of tableColumnNames" name="{{colName}}">
+    <ng-template ngx-datatable-cell-template let-rowIndex="rowIndex" let-row="data" let-value="value">
+      <input
+        autofocus
+        (blur)="updateValue($event, colName, rowIndex)"
+        type="number"
+        [value]="value"
+      />
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
+
+<button type="button" (click)="submit()">Submit</button>

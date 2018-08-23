@@ -15,6 +15,11 @@ import { DaedalusService } from './services/daedalus/daedalus.service';
 // Modules
 import { AppRoutingModule } from './app-routing.module';
 import { SystemDetailComponent } from './system-detail/system-detail.component';
+import { NewDatasetComponent } from './new-dataset/new-dataset.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { NgxDatatableModule} from '@swimlane/ngx-datatable';
+
 
 @NgModule({
   declarations: [
@@ -22,13 +27,17 @@ import { SystemDetailComponent } from './system-detail/system-detail.component';
     SystemsListComponent,
     NewSystemComponent,
     SystemDetailComponent,
+    NewDatasetComponent,
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatGridListModule,
+    NgxDatatableModule
   ],
   providers: [DaedalusService],
   bootstrap: [AppComponent],
