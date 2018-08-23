@@ -26,9 +26,10 @@
 </div>
 
 <b>DataSets</b> <button><a routerLink="/systems/{{system?.id}}/datasets/new">Add Dataset</a></button>
-<div *ngFor="let dataset of system?.datasets; let i = count">
+<div *ngFor="let dataset of system?.datasets; let i = count" [attr.data-index]="i">
   <div>
-    <b>Dataset: {{i}}</b>
+    <!-- TODO Dataset index not changing -->
+    <a routerLink="/datasets/{{dataset?.id}}"><b>Dataset: {{i}}</b></a>
     <p>{{ dataset.description }}</p>
     <p>Runs: {{ dataset.runs }}</p>
   </div>

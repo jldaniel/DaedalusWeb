@@ -5,6 +5,7 @@ import { NewSystemComponent } from './new-system/new-system.component';
 import { SystemsListComponent } from './systems-list/systems-list.component';
 import { SystemDetailComponent } from './system-detail/system-detail.component';
 import {NewDatasetComponent} from './new-dataset/new-dataset.component';
+import {DatasetDetailComponent} from './dataset-detail/dataset-detail.component';
 
 
 const appRoutes: Routes = [
@@ -12,6 +13,7 @@ const appRoutes: Routes = [
   { path: 'systems/new', component: NewSystemComponent },
   { path: 'systems/:id', component: SystemDetailComponent },
   { path: 'systems/:id/datasets/new', component: NewDatasetComponent },
+  { path: 'datasets/:id', component: DatasetDetailComponent },
   { path: '',
     redirectTo: '/systems',
     pathMatch: 'full' }

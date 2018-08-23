@@ -19,6 +19,7 @@ import { NewDatasetComponent } from './new-dataset/new-dataset.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { NgxDatatableModule} from '@swimlane/ngx-datatable';
+import { DatasetDetailComponent } from './dataset-detail/dataset-detail.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { NgxDatatableModule} from '@swimlane/ngx-datatable';
     NewSystemComponent,
     SystemDetailComponent,
     NewDatasetComponent,
+    DatasetDetailComponent,
   ],
   imports: [
     AppRoutingModule,

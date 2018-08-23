@@ -46,7 +46,7 @@ export class DaedalusService {
   }
 
   getDataSet(dataSetId: number): Observable<DataSet> {
-    const url = this.datasetsUrl + dataSetId;
+    const url = this.datasetsUrl + dataSetId + '/';
     return this.http.get<DataSet>(url, {headers: this.createHeaders()});
   }
 
